@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Kafka with Zookeeper</short>
+  <description>Apache Kafka is an open-source stream-processing software platform. </description>
+  <port protocol="tcp" port="9092"/> 
+  <port protocol="tcp" port="2181"/> 
+  <port protocol="tcp" port="2888"/> 
+  <port protocol="tcp" port="3888"/> 
+</service>
