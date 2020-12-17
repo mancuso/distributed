@@ -1,30 +1,31 @@
-    2  subscription-manager register --username peter.mancuso@mississauga.ca --password
-    5  subscription-manager list --available
-   15  subscription-manager attach --pool=`cat pool`
-   17  yum update
-   18  systemctl reboot
-   20  sestatus
-   22  vim /etc/selinux/config 
-   24  setenforce 0
-   26  systemctl list-unit-files
-   28  vim /etc/resolv.conf 
-   29  vim /etc/hosts
-   30  dnf install chrony-3.3-3.el8.x86_64 
-   31  vim /etc/chrony.conf 
-   32  systemctl restart chronyd
-   33  clear
-   34  chronyc trace
-   35  chronyc tracking
-   36  chronyc sources
-   37  dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-   38  dnf list docker-ce --showduplicates | sort -r
-   39  dnf install docker-ce
-   40  dnf install docker-ce --allowerasing
-   43  mkdir src
-   44  cd src
-   45  mkdir sync
-   46  cd sync/
-   49  git config --global user.name mancuso
-   50  git config --global user.email intercepted@gmail.com
-   51  git clone https://github.com/mancuso/distributed
-   58  history>>history-shell
+subscription-manager register --username peter.mancuso@mississauga.ca --password
+subscription-manager list --available
+subscription-manager attach --pool=`cat pool`
+yum update
+systemctl reboot
+sestatus
+vim /etc/selinux/config 
+setenforce 0
+systemctl list-unit-files
+vim /etc/resolv.conf 
+vim /etc/hosts
+dnf install chrony-3.3-3.el8.x86_64 
+vim /etc/chrony.conf 
+systemctl restart chronyd
+clear
+chronyc trace
+chronyc tracking
+chronyc sources
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+dnf list docker-ce --showduplicates | sort -r
+dnf install docker-ce
+dnf install docker-ce --allowerasing
+mkdir src
+cd src
+mkdir sync
+cd sync/
+git config --global user.name mancuso
+git config --global user.email intercepted@gmail.com
+git clone https://github.com/mancuso/distributed
+systemctl start docker
+systemctl enable docker
