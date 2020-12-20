@@ -1,0 +1,34 @@
+subscription-manager register --username peter.mancuso@mississauga.ca --password
+subscription-manager list --available
+subscription-manager attach --pool=`cat pool`
+yum update
+systemctl reboot
+sestatus
+vim /etc/selinux/config 
+setenforce 0
+systemctl list-unit-files
+vim /etc/resolv.conf 
+vim /etc/hosts
+dnf install chrony-3.3-3.el8.x86_64 
+vim /etc/chrony.conf 
+systemctl restart chronyd
+clear
+chronyc trace
+chronyc tracking
+chronyc sources
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+dnf list docker-ce --showduplicates | sort -r
+dnf install docker-ce
+dnf install docker-ce --allowerasing
+mkdir src
+cd src
+mkdir sync
+cd sync/
+git config --global user.name mancuso
+git config --global user.email intercepted@gmail.com
+git clone https://github.com/mancuso/distributed
+systemctl start docker
+systemctl enable docker
+curl -L https://github.com/docker/compose/releases/download/1.28.0-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+sudo usermod -aG docker $USER
