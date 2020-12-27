@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Docker Swarm</short>
+  <description>Docker Swarm Members</description>
+    <source address="142.240.5.166"/>
+    <source address="142.240.5.136"/>
+    <source address="142.240.6.169"/>
+
+      <service name="docker-swarm"/>
+
+</zone>
