@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<service>
-  <short>Docker Swarm</short>
-  <description>Docker Swarm ports for all members</description>
-    <port protocol="tcp" port="2377"/>	<!-- cluster management communications         -->
-    <port protocol="tcp" port="7946"/>  <!-- internode communication                   -->
-    <port protocol="udp" port="7946"/>  <!-- internode communication                   -->
-    <port protocol="udp" port="4789"/>  <!-- overlay network traffic                   -->
-</service>
