@@ -1,4 +1,4 @@
-subscription-manager register --username peter.mancuso@mississauga.ca --password
+subscription-manager register --username mancuso --password
 subscription-manager list --available
 subscription-manager attach --pool=`cat pool`
 yum update

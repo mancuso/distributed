@@ -3,9 +3,9 @@
   <short>Docker Swarm  Nodes</short>
   <description>Docker Swarm Member Nodes</description>
 
-    <source address="142.240.5.166"/>
-    <source address="142.240.5.136"/>
-    <source address="142.240.6.169"/>
+    <source address="172.16.0.1"/>
+    <source address="172.16.0.2"/>
+    <source address="172.16.0.3"/>
 
   <port port="2377" protocol="tcp"/>
   <port port="7946" protocol="tcp"/>
