@@ -12,8 +12,6 @@ vim /etc/hosts
 dnf install chrony-3.3-3.el8.x86_64 
 vim /etc/chrony.conf 
 systemctl restart chronyd
-clear
-chronyc trace
 chronyc tracking
 chronyc sources
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
