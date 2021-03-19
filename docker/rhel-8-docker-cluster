@@ -2,11 +2,8 @@ subscription-manager register --username mancuso --password
 subscription-manager list --available
 subscription-manager attach --pool=`cat pool`
 yum update
-systemctl reboot
-sestatus
 vim /etc/selinux/config 
 setenforce 0
-systemctl list-unit-files
 vim /etc/resolv.conf 
 vim /etc/hosts
 dnf install chrony-3.3-3.el8.x86_64 
@@ -23,7 +20,7 @@ cd src
 mkdir sync
 cd sync/
 git config --global user.name mancuso
-git config --global user.email intercepted@gmail.com
+git config --global user.email you@example.com
 git clone https://github.com/mancuso/distributed
 systemctl start docker
 systemctl enable docker
